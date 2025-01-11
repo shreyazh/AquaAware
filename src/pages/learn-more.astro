@@ -1,0 +1,232 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Learn More - AquaAware">
+	<main>
+		<section class="hero">
+			<div class="hero-content">
+				<h1>Water Awareness & Conservation</h1>
+				<p>Exploring our relationship with Earth's most vital resource</p>
+			</div>
+		</section>
+
+		<section class="section">
+			<h2>Current Initiatives</h2>
+			<div class="initiatives-grid">
+				<div class="initiative-card">
+					<h3>UNESCO's IHP</h3>
+					<p>The International Hydrological Programme promotes water research and management globally.</p>
+				</div>
+				<div class="initiative-card">
+					<h3>SDG 6</h3>
+					<p>Working towards universal and equitable access to water and sanitation by 2030.</p>
+				</div>
+				<div class="initiative-card">
+					<h3>World Water Day</h3>
+					<p>Annual celebration on March 22 to raise awareness about global water issues.</p>
+				</div>
+			</div>
+		</section>
+
+		<section class="section historical">
+			<h2>Historical Timeline</h2>
+			<div class="timeline">
+				<div class="timeline-item">
+					<h3>Ancient Civilizations</h3>
+					<p>Mesopotamia, Indus Valley, and Egypt developed sophisticated irrigation systems and water storage technologies around major rivers like Tigris-Euphrates, Indus, and Nile.</p>
+				</div>
+				<div class="timeline-item">
+					<h3>Roman Innovation</h3>
+					<p>The Romans built remarkable aqueducts, some of which still function today, demonstrating early engineering excellence in water distribution.</p>
+				</div>
+				<div class="timeline-item">
+					<h3>Industrial Revolution</h3>
+					<p>Water mills powered industries like grain milling and textile production, while increasing water usage raised early environmental concerns.</p>
+				</div>
+				<div class="timeline-item">
+					<h3>Modern Era</h3>
+					<p>1948: Creation of WHO focusing on water quality<br>
+					1977: UN Water Conference recognized water as a finite resource</p>
+				</div>
+			</div>
+		</section>
+
+		<section class="section statistics">
+			<h2>Global Impact</h2>
+			<div class="stats-detailed-grid">
+				<div class="stat-detailed-card">
+					<h3>Water Scarcity</h3>
+					<ul>
+						<li>2.2 billion people lack access to safe drinking water</li>
+						<li>By 2025, half of the world's population may live in water-stressed areas</li>
+						<li>1 in 4 people globally face water shortages</li>
+					</ul>
+				</div>
+				<div class="stat-detailed-card">
+					<h3>Economic Impact</h3>
+					<ul>
+						<li>Agriculture accounts for 70% of global freshwater usage</li>
+						<li>Producing 1kg of beef requires 15,000 liters of water</li>
+						<li>Water scarcity costs billions in lost productivity</li>
+					</ul>
+				</div>
+				<div class="stat-detailed-card">
+					<h3>Environmental Concerns</h3>
+					<ul>
+						<li>Industrial discharge and agricultural runoff degrade freshwater sources</li>
+						<li>Plastic and microplastic contamination in oceans and rivers</li>
+						<li>Climate change accelerates wetland drying</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+
+		<section class="section innovations">
+			<h2>Technological Solutions</h2>
+			<div class="tech-grid">
+				<div class="tech-card">
+					<h3>Desalination Plants</h3>
+					<p>Converting seawater into drinkable water for arid regions</p>
+				</div>
+				<div class="tech-card">
+					<h3>Smart Irrigation</h3>
+					<p>Advanced systems to minimize agricultural water waste</p>
+				</div>
+				<div class="tech-card">
+					<h3>Water Recycling</h3>
+					<p>Municipal systems for treating and reusing wastewater</p>
+				</div>
+			</div>
+		</section>
+
+		<section class="section future-plans">
+			<h2>Moving Forward</h2>
+			<div class="plans-grid">
+				<div class="plan-card">
+					<h3>Education Initiatives</h3>
+					<ul>
+						<li>Integrating water literacy into school curriculums</li>
+						<li>"Save Water, Save Life" awareness campaigns</li>
+						<li>Community education programs</li>
+					</ul>
+				</div>
+				<div class="plan-card">
+					<h3>Policy Development</h3>
+					<ul>
+						<li>Strengthening water rights legislation</li>
+						<li>Implementing pollution control measures</li>
+						<li>Developing sustainable usage guidelines</li>
+					</ul>
+				</div>
+				<div class="plan-card">
+					<h3>Research Focus</h3>
+					<ul>
+						<li>Green water purification technologies</li>
+						<li>Efficient desalination methods</li>
+						<li>Ecosystem water role studies</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+	</main>
+</Layout>
+
+<style>
+	.hero {
+		background: linear-gradient(135deg, var(--primary-light), var(--primary));
+		color: white;
+		padding: 8rem 2rem 4rem;
+		text-align: center;
+	}
+
+	.hero h1 {
+		font-size: 3rem;
+		margin-bottom: 1rem;
+	}
+
+	.initiatives-grid, .tech-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: 2rem;
+		margin-top: 2rem;
+	}
+
+	.initiative-card, .tech-card {
+		background: white;
+		padding: 2rem;
+		border-radius: 1rem;
+		box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+		transition: transform 0.3s ease;
+	}
+
+	.initiative-card:hover, .tech-card:hover {
+		transform: translateY(-5px);
+	}
+
+	.timeline {
+		max-width: 800px;
+		margin: 2rem auto;
+		position: relative;
+	}
+
+	.timeline-item {
+		background: white;
+		padding: 2rem;
+		border-radius: 1rem;
+		margin-bottom: 2rem;
+		box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+	}
+
+	.stats-detailed-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: 2rem;
+	}
+
+	.stat-detailed-card {
+		background: white;
+		padding: 2rem;
+		border-radius: 1rem;
+		box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+	}
+
+	.stat-detailed-card ul {
+		list-style-position: inside;
+		padding: 0;
+	}
+
+	.stat-detailed-card li {
+		margin: 0.5rem 0;
+		color: var(--text);
+	}
+
+	.plans-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: 2rem;
+	}
+
+	.plan-card {
+		background: white;
+		padding: 2rem;
+		border-radius: 1rem;
+		box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+	}
+
+	.plan-card ul {
+		list-style-position: inside;
+		padding: 0;
+	}
+
+	.plan-card li {
+		margin: 0.5rem 0;
+		color: var(--text);
+	}
+
+	@media (max-width: 768px) {
+		.hero h1 {
+			font-size: 2rem;
+		}
+	}
+</style>

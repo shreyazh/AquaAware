@@ -1,0 +1,124 @@
+---
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Water awareness and conservation website" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body>
+		<nav class="navbar">
+			<div class="nav-content">
+				<a href="/" class="logo">AquaAware</a>
+				<div class="nav-links">
+					<a href="#history">History</a>
+					<a href="#facts">Facts</a>
+					<a href="#challenges">Challenges</a>
+					<a href="#future">Future</a>
+				</div>
+			</div>
+		</nav>
+		<slot />
+		<footer>
+			<p>&copy; 2025 Shreyash Srivastva. Together we solve, together we evolve.</p>
+		</footer>
+	</body>
+</html>
+<style is:global>
+	:root {
+		--primary: #2196f3;
+		--primary-light: #6ec6ff;
+		--primary-dark: #0069c0;
+		--accent: #80deea;
+		--text: #37474f;
+		--background: #e3f2fd;
+	}
+	
+	* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+	}
+	
+	html {
+		font-family: 'Quicksand', sans-serif;
+		background: var(--background);
+		color: var(--text);
+		scroll-behavior: smooth;
+	}
+
+	.navbar {
+		background: white;
+		box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+		position: fixed;
+		width: 100%;
+		top: 0;
+		z-index: 1000;
+	}
+
+	.nav-content {
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 1rem 2rem;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.logo {
+		font-size: 1.5rem;
+		font-weight: 700;
+		color: var(--primary);
+		text-decoration: none;
+	}
+
+	.nav-links {
+		display: flex;
+		gap: 2rem;
+	}
+
+	.nav-links a {
+		color: var(--text);
+		text-decoration: none;
+		font-weight: 500;
+		transition: color 0.3s ease;
+	}
+
+	.nav-links a:hover {
+		color: var(--primary);
+	}
+
+	footer {
+		background: white;
+		padding: 2rem;
+		text-align: center;
+		margin-top: 4rem;
+	}
+
+	.section {
+		padding: 4rem 2rem;
+		max-width: 1200px;
+		margin: 0 auto;
+	}
+
+	.wave-divider {
+		height: 150px;
+		overflow: hidden;
+	}
+
+	.wave-divider svg {
+		height: 100%;
+		width: 100%;
+	}
+</style>
